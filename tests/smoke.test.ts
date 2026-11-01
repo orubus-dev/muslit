@@ -1,0 +1,1 @@
+import test from "node:test";import assert from "node:assert/strict";import {formats} from "../src/services/media.js";test("supported conversion formats",()=>assert.deepEqual(formats,["mp3","flac","wav","opus","m4a"]));test("does not advertise executable formats",()=>assert.equal((formats as string[]).includes("exe"),false));
